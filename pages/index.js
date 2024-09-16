@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function Home() {
   const [name, setName] = useState('');
@@ -75,7 +75,7 @@ export default function Home() {
     "{name}, you're always one step ahead!",
     "You're like a human ray of sunshine, {name}!",
     "{name}, you make every day feel special!",
-    
+
     // Funny Compliments (15)
     "You must be made of copper and tellurium because you're Cu-Te, {name}!",
     "{name}, you're like a cloud—because every time I see you, my day gets brighter!",
@@ -93,7 +93,7 @@ export default function Home() {
     "You’re the human version of a perfect cup of coffee, {name}!",
     "You make awkward situations less awkward just by being you, {name}!"
   ];
-  
+
   const generateCompliment = () => {
     if (name.trim() === '') {
       setCompliment("Please enter your name to get a compliment!");
@@ -118,6 +118,15 @@ export default function Home() {
       generateCompliment();
     }
   };
+
+  // UseEffect for AdSense loading
+  useEffect(() => {
+    try {
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    } catch (e) {
+      console.error('AdSense error:', e);
+    }
+  }, []);
 
   return (
     <div className="container">
@@ -155,6 +164,16 @@ export default function Home() {
             ))}
           </p>
         )}
+
+        {/* Google AdSense Display Ad */}
+        <div className="adsense-container">
+          <ins className="adsbygoogle"
+               style={{ display: 'block' }}
+               data-ad-client="ca-pub-1438309353509594"
+               data-ad-slot="6563321844"
+               data-ad-format="auto"
+               data-full-width-responsive="true"></ins>
+        </div>
       </div>
     </div>
   );
