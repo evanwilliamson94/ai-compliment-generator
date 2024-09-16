@@ -100,6 +100,13 @@ export default function Home() {
       return;
     }
 
+    // Log the event to Google Analytics
+    window.gtag('event', 'compliment_generated', {
+      event_category: 'Compliments',
+      event_label: 'Compliment Generated',
+      value: name,
+    });
+
     const randomCompliment = compliments[Math.floor(Math.random() * compliments.length)];
     const personalizedCompliment = randomCompliment.replace('{name}', name);
     setCompliment(personalizedCompliment);
