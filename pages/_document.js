@@ -5,6 +5,12 @@ export default function Document() {
     <Html lang="en">
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        {/* Google AdSense Verification Script */}
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1438309353509594"
+          crossorigin="anonymous"
+        ></script>
         {/* Google Analytics Script */}
         <script
           async
