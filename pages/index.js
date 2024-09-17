@@ -165,15 +165,8 @@ export default function Home() {
           </p>
         )}
 
-        {/* Google AdSense Display Ad */}
-        <div className="adsense-container">
-          <ins className="adsbygoogle"
-               style={{ display: 'block' }}
-               data-ad-client="ca-pub-1438309353509594"
-               data-ad-slot="6563321844"
-               data-ad-format="auto"
-               data-full-width-responsive="true"></ins>
-        </div>
+   
+
       </div>
     </div>
   );
